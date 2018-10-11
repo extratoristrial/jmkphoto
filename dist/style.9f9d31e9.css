@@ -1,6 +1,13 @@
+
 body {
     font-family: 'Bai Jamjuree', sans-serif;
     margin: 0;
+    display: grid;
+    grid-template-areas: "Header"
+    "Content"
+    "Footer";
+    grid-template-rows: min-content auto min-content;
+    height: 100vh;
 }
 
 h1 {
@@ -9,19 +16,17 @@ h1 {
 }
 
 #header { 
-    margin-left: 2%;
-}
-
-#header a {
-    float: right;
-    margin-top: 25px;
-    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 10px;
 }
 
 a {   
     font-family: 'Bai Jamjuree', sans-serif;
     text-decoration: none;
     color: #575757;
+    padding: 5px;
 }
 
 a:hover {    
@@ -30,16 +35,17 @@ a:hover {
 
 #title {
     font-family: 'Bungee Shade', cursive;
-    font-size: 200%;   
+    font-size: 200%;
+    grid-area: Title;
+    display: block;
 }
 
 #nav { 
-
-
+    grid-area: Navigation;
 }   
 
 #container { 
-
+    grid-area: Content;
 }
 
 
@@ -52,6 +58,7 @@ img {
     justify-content: space-between;
     margin: 10px;
     padding: 10px;
+    grid-area: Footer;
 }
 
 #footer a {
@@ -62,3 +69,11 @@ img {
     padding: 10px;
     display: block;
 }
+
+@media screen and (min-width: 500px) {
+    #header {
+        flex-direction: row;
+        justify-content: space-between; 
+        padding-left: 10px;
+        padding-right: 10px;
+    }
