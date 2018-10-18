@@ -56,8 +56,9 @@ a:hover {
 
 #about {
     display: flex;
+    flex-direction: column;
+    align-content: center;
     align-items: center;
-    padding-top: 5%;
     padding-left: 15%;
     padding-right: 15%;
     text-align: center;
@@ -65,14 +66,16 @@ a:hover {
 
 #about a {
     font-weight: bold;
-    padding: 2px;
 }
 
 #about img {
-    width: 20%;
     padding: 5px;
-    display: inline;
+    display: block;
 
+}
+
+#contact {
+    display: grid;    
 }
 
 .carousel-item {
